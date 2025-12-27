@@ -1,12 +1,15 @@
 # SkillCorner X PySport Analytics Cup
 ## Analyst Track Abstract Template (max. 300 words)
 ### Introduction
+
 This project introduces an open-source framework designed to empower football analysts through the use of compact, efficient language models (LLMs). By utilising smaller models such as Llama 3.1, the system prioritises speed and customisability, addressing the latency and cost issues often associated with larger commercial models. The architecture is built to function as a flexible library, allowing users to swap models and train the system on proprietary data, thereby democratising access to high-level data science tools within the football industry.
 
 ### Usecase(s)
+
 The system currently automates the retrieval of physical performance data and the generation of key visualisations, including scatter plots, bar charts, and radar profiles. Recognising the instability of LLM-generated SQL, the framework incorporates robust guardrails and self-correction mechanisms to ensure query reliability. Moving forward, the tool is designed to support bespoke metric definition, enabling clubs to generate real-time analysis tailored to specific tactical requirements. The ultimate goal is a fully autonomous agent that intelligently selects the most appropriate visualisation method and report format without human intervention.
 
 ### Potential Audience
+
 The primary beneficiaries are professional performance analysts and recruitment departments seeking to integrate bespoke, real-time insights into their workflow without extensive engineering overhead. Additionally, by lowering the technical barrier to entry, this project serves the wider football analytics community, including independent scouts and tactical bloggers. It offers a scalable solution that allows non-technical experts to harness the power of generative AI for sophisticated, data-driven storytelling.
 ---
 
