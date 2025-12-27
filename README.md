@@ -1,55 +1,13 @@
 # SkillCorner X PySport Analytics Cup
-This repository contains the submission template for the SkillCorner X PySport Analytics Cup **Analyst Track**. 
-Your submission for the **Analyst Track** should be on the `main` branch of your own fork of this repository.
-
-Find the Analytics Cup [**dataset**](https://github.com/SkillCorner/opendata/tree/master/data) and [**tutorials**](https://github.com/SkillCorner/opendata/tree/master/resources) on the [**SkillCorner Open Data Repository**](https://github.com/SkillCorner/opendata).
-
-## Submitting
-Make sure your `main` branch contains:
-
-1. A single Jupyter Notebook in the root of this repository called `submission.ipynb`
-    - This Juypter Notebook can not contain more than 2000 words.
-    - All other code should also be contained in this repository, but should be imported into the notebook from the `src` folder.
-
-
-or,
-
-
-1. A single Python file in the root of this repository called `main.py`
-    - This file should not contain more than 2000 words.
-    - All other code should also be contained in this repository, but should be imported into the notebook from the `src` folder.
-
-or, 
-
-
-1. A publicly accessible web app or website written in a language of your choice (e.g. Javascript)
-
-    - Your code should follow a clear and well defined structure.
-    - All other code should also be contained in this repository.
-    - The URL to the webapp should be included at the bottom of the read me under **URL to Web App / Website**
-
-
-2. An abstract of maximum 300 words that follows the **Analyst Track Abstract Template**.
-3. Add a URL to a screen recording video of maximum 60 seconds that shows your work. Add it under the **Video URL** Section below. (Use YouTube, or any other site to share this video).
-4. Submit your GitHub repository on the [Analytics Cup Pretalx page](https://pretalx.pysport.org)
-
-Finally:
-- Make sure your GitHub repository does **not** contain big data files. The tracking data should be loaded directly from the [Analytics Cup Data GitHub Repository](https://github.com/SkillCorner/opendata). For more information on how to load the data directly from GitHub please see this [Jupyter Notebook](https://github.com/SkillCorner/opendata/blob/master/resources/getting-started-skc-tracking-kloppy.ipynb).
-- Make sure the `submission.ipynb` notebook runs on a clean environment, or
-- Provide clear and concise instructions how to run the `main.py` (e.g. `streamlit run main.py`) if applicable in the **Run Instructions** Section below.
-- Providing a URL to a publically accessible webapp or website with a running version of your submission is mandatory when choosing to submit in a different language then Python, it is encouraged, but optional when submitting in Python.
-
-_⚠️ Not adhering to these submission rules and the [**Analytics Cup Rules**](https://pysport.org/analytics-cup/rules) may result in a point deduction or disqualification._
-
----
-
 ## Analyst Track Abstract Template (max. 300 words)
-#### Introduction
+### Introduction
+This project introduces an open-source framework designed to empower football analysts through the use of compact, efficient language models (LLMs). By utilising smaller models such as Llama 3.1, the system prioritises speed and customisability, addressing the latency and cost issues often associated with larger commercial models. The architecture is built to function as a flexible library, allowing users to swap models and train the system on proprietary data, thereby democratising access to high-level data science tools within the football industry.
 
-#### Usecase(s)
+### Usecase(s)
+The system currently automates the retrieval of physical performance data and the generation of key visualisations, including scatter plots, bar charts, and radar profiles. Recognising the instability of LLM-generated SQL, the framework incorporates robust guardrails and self-correction mechanisms to ensure query reliability. Moving forward, the tool is designed to support bespoke metric definition, enabling clubs to generate real-time analysis tailored to specific tactical requirements. The ultimate goal is a fully autonomous agent that intelligently selects the most appropriate visualisation method and report format without human intervention.
 
-#### Potential Audience
-
+### Potential Audience
+The primary beneficiaries are professional performance analysts and recruitment departments seeking to integrate bespoke, real-time insights into their workflow without extensive engineering overhead. Additionally, by lowering the technical barrier to entry, this project serves the wider football analytics community, including independent scouts and tactical bloggers. It offers a scalable solution that allows non-technical experts to harness the power of generative AI for sophisticated, data-driven storytelling.
 ---
 
 ## Video URL
@@ -57,7 +15,89 @@ _⚠️ Not adhering to these submission rules and the [**Analytics Cup Rules**]
 ---
 
 ## Run Instructions
+# Run Instructions
+
+## Quick Start Guide
+
+### Step 1: Install Ollama and Pull Model
+```bash
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Pull Llama 3.1 model (approximately 4.7GB download)
+ollama pull llama3.1:latest
+
+# Start Ollama service
+ollama serve
+```
 
 ---
 
-## [Optional] URL to Web App / Website
+### Step 2: Create Virtual Environment
+```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate it
+source venv/bin/activate  # Linux/Mac
+# OR
+venv\Scripts\activate     # Windows
+```
+
+---
+
+### Step 3: Install Dependencies
+```bash
+# Install all required packages
+pip install -r requirements.txt
+```
+
+### Step 4: Run the Application
+```bash
+# Start the app
+python -m streamlit run app.py
+
+# OR use the helper script
+./run_app.sh
+```
+
+**Open your browser to: http://localhost:8501**
+
+---
+
+## Alternative: One-Command Setup
+
+```bash
+# Run complete automated setup (performs steps 1-3)
+chmod +x src/setup/setup_ollama.sh
+./src/setup/setup_ollama.sh
+```
+
+---
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Ollama not running | Run `ollama serve` in a separate terminal |
+| Model not found | Run `ollama pull llama3.1:latest` |
+| Import errors | Run `pip install -r requirements.txt` |
+| Permission denied | Run `chmod +x *.sh` |
+| Port already in use | Change port in run_app.sh or use `python -m streamlit run app.py --server.port 8502` |
+
+---
+
+## Verification Steps
+
+```bash
+# Check Ollama
+ollama list  # Should show llama3.1:latest
+
+# Check Python packages
+pip list | grep streamlit  # Should show version
+
+# Test the app
+python -m streamlit run app.py
+```
+---
+
