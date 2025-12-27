@@ -10,6 +10,7 @@ The system currently facilitates the automated retrieval of physical performance
 The primary users are professional performance analysts and recruitment scouts seeking to enhance their workflow with tailored, real-time insights without requiring extensive engineering support. Furthermore, this project supports the broader football analytics community by providing a scalable, open-source solution that allows non-technical experts to leverage generative AI for sophisticated data storytelling and opposition analysis.
 
 ## Video URL
+[Video URL](https://drive.google.com/file/d/1eQkBUwwkqQTipu7bva72no27p4SO4qrS/view?usp=sharing)
 
 ---
 
