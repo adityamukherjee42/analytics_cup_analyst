@@ -1,25 +1,19 @@
 # SkillCorner X PySport Analytics Cup
 ## Analyst Track Abstract Template (max. 300 words)
 ### Introduction
-
-This project introduces an open-source framework designed to empower football analysts through the use of compact, efficient language models (LLMs). By utilising smaller models such as Llama 3.1, the system prioritises speed and customisability, addressing the latency and cost issues often associated with larger commercial models. The architecture is built to function as a flexible library, allowing users to swap models and train the system on proprietary data, thereby democratising access to high-level data science tools within the football industry.
+This project presents an open-source framework dedicated to assisting football analysts by integrating compact language models, such as Llama 3.1, into the data analysis workflow. By utilising smaller, efficient models, the system addresses latency and cost while offering the potential for bespoke training on proprietary datasets. The architecture is designed as a flexible library, reducing the technical barrier to entry and democratising access to advanced data science tools within the football industry.
 
 ### Usecase(s)
-
-The system currently automates the retrieval of physical performance data and the generation of key visualisations, including scatter plots, bar charts, and radar profiles. Recognising the instability of LLM-generated SQL, the framework incorporates robust guardrails and self-correction mechanisms to ensure query reliability. Moving forward, the tool is designed to support bespoke metric definition, enabling clubs to generate real-time analysis tailored to specific tactical requirements. The ultimate goal is a fully autonomous agent that intelligently selects the most appropriate visualisation method and report format without human intervention.
+The system currently facilitates the automated retrieval of physical performance data and the generation of specific visualisations, including scatter plots, bar charts, and radar profiles. Acknowledging the inherent instability of SQL generation in large language models, the framework implements robust guardrails and self-correction protocols to ensure query reliability. The roadmap envisages a fully autonomous agent capable of defining club-specific metrics and executing real-time analysis. This evolution aims to allow the model to independently select optimal visualisation methods and generate comprehensive reports, shifting the focus from manual coding to strategic interpretation.
 
 ### Potential Audience
-
-The primary beneficiaries are professional performance analysts and recruitment departments seeking to integrate bespoke, real-time insights into their workflow without extensive engineering overhead. Additionally, by lowering the technical barrier to entry, this project serves the wider football analytics community, including independent scouts and tactical bloggers. It offers a scalable solution that allows non-technical experts to harness the power of generative AI for sophisticated, data-driven storytelling.
----
+The primary users are professional performance analysts and recruitment scouts seeking to enhance their workflow with tailored, real-time insights without requiring extensive engineering support. Furthermore, this project supports the broader football analytics community by providing a scalable, open-source solution that allows non-technical experts to leverage generative AI for sophisticated data storytelling and opposition analysis.
 
 ## Video URL
 
 ---
 
 ## Run Instructions
-# Run Instructions
-
 ## Quick Start Guide
 
 ### Step 1: Install Ollama and Pull Model
@@ -33,7 +27,6 @@ ollama pull llama3.1:latest
 # Start Ollama service
 ollama serve
 ```
-
 ---
 
 ### Step 2: Create Virtual Environment
