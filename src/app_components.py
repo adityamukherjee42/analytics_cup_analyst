@@ -4,7 +4,7 @@ Reusable Streamlit components for sidebar, welcome screen, and chat messages
 """
 
 import streamlit as st
-from app_config import EXAMPLE_QUERIES
+from src.app_config import EXAMPLE_QUERIES
 
 
 # --- SESSION STATE ---
@@ -71,7 +71,7 @@ def render_quick_actions():
     
     with col2:
         if st.session_state.get("messages"):
-            from app_utils import export_conversation
+            from src.app_utils import export_conversation
             export_text = export_conversation(st.session_state.messages)
             st.download_button(
                 "📥 Export",
